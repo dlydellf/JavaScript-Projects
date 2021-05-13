@@ -71,3 +71,11 @@ function decrement() {
     "Decrement",
   ).innerHTML = `The value ${randNumb} has been <em>decremented</em> (by one) to ${newRandNumb}.`;
 }
+
+// Step 93
+function mathObjectMethod() {
+  var randBase = Math.floor(Math.random() * 11) + 1; // Random integer (for the base) between 1 & 10
+  var randExp = Math.floor(Math.random() * 4) + 1; // Random integer (for the exponent) between 1 & 3
+  document.getElementById("MathObjectMethod").innerHTML =
+    `A base of ${randBase}, raised to the power of ${randExp} = ` + Math.pow(randBase, randExp);
+}
