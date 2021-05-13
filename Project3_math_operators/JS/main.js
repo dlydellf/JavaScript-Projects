@@ -53,6 +53,21 @@ function allAtOnce() {
 // Step 88:
 function negation() {
   var operand = Math.floor(Math.random() * 101) + 1; //  Random integer between 1 & 100
-  document.getElementById("negation").innerHTML = `The value: ${operand}... `; // >>> DOM is updated with the chosen random number
+  document.getElementById("negation").innerHTML = `The value: ${operand}... <br>`; // >>> DOM is updated with the chosen random number
   document.getElementById("Negation").innerHTML = `...becomes <strong>${-operand}<strong>!`;
+}
+// Step 90
+function increment() {
+  var randNum = Math.floor(Math.random() * 101) + 1; // Random integer between 1 & 100
+  var newRandNum = randNum--; // "++" DECREASES randNum by 1, but "--" is INCREASING it - weird
+  document.getElementById(
+    "Increment",
+  ).innerHTML = `The value ${randNum} was <em>incremented</em> (by one) to ${newRandNum}.`;
+}
+function decrement() {
+  var randNumb = Math.floor(Math.random() * 101) + 1; // Random integer between 1 & 100
+  var newRandNumb = randNumb++; // Same as above; "--" INCREASES randNumb by 1, while "++" DECREASES it
+  document.getElementById(
+    "Decrement",
+  ).innerHTML = `The value ${randNumb} has been <em>decremented</em> (by one) to ${newRandNumb}.`;
 }
