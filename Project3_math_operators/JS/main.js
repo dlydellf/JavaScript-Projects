@@ -30,13 +30,15 @@ function division() {
   document.getElementById("Division").innerHTML = `${dividend} &#247 ${divisor} = <strong>${quotient}<strong>`;
 }
 
-// Step 84
+// Steps 84 & 86
 function allAtOnce() {
   var randNumb = Math.floor(Math.random() * 4) + 1; // Random integer between 1 & 3
   document.getElementById("RandNumb").innerHTML = `<strong>${randNumb}<strong>`; // >>>>> DOM is updated with the chosen random number
   var result = randNumb; // Declare & assign a 2nd variable equal to the random number
-  while (result != 1) { // While the 2nd variable is NOT 1...
-    if (result % 2 == 0) { // Check if the 2nd variable is even
+  while (result != 1) {
+    // While the 2nd variable is NOT 1...
+    if (result % 2 == 0) {
+      // Check if the 2nd variable is even
       var result = randNumb / 2; // Halve random number & reassign to the 2nd variable
       document.getElementById("Evens").innerHTML = `${result}`; // >>>>> DOM is updated with result from Line 40, GOTO to Line 38
     } else {
@@ -44,5 +46,13 @@ function allAtOnce() {
       document.getElementById("Odds").innerHTML = `${result}`; // >>>>> DOM is updated with result from Line 43, GOTO Line 38
     }
     document.getElementById("Results").innerHTML = `<strong>${result}<strong>`; // >>>>> Once 2nd variable == 1, update DOM & END WHILE LOOP!!
+    result = 1;
   }
+}
+
+// Step 88:
+function negation() {
+  var operand = Math.floor(Math.random() * 101) + 1; //  Random integer between 1 & 100
+  document.getElementById("negation").innerHTML = `The value: ${operand}... `; // >>> DOM is updated with the chosen random number
+  document.getElementById("Negation").innerHTML = `...becomes <strong>${-operand}<strong>!`;
 }
