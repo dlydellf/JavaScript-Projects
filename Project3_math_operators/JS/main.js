@@ -33,16 +33,16 @@ function division() {
 // Step 84
 function allAtOnce() {
   var randNumb = Math.floor(Math.random() * 4) + 1; // Random integer between 1 & 3
-  document.getElementById("RandNumb").innerHTML = `<strong>${randNumb}<strong>`;
-  var result = randNumb;
-  while (result != 1) {
-    if (result % 2 == 0) {
-      var result = randNumb / 2;
-      document.getElementById("Evens").innerHTML = `${result}`;
+  document.getElementById("RandNumb").innerHTML = `<strong>${randNumb}<strong>`; // >>>>> DOM is updated with the chosen random number
+  var result = randNumb; // Declare & assign a 2nd variable equal to the random number
+  while (result != 1) { // While the 2nd variable is NOT 1...
+    if (result % 2 == 0) { // Check if the 2nd variable is even
+      var result = randNumb / 2; // Halve random number & reassign to the 2nd variable
+      document.getElementById("Evens").innerHTML = `${result}`; // >>>>> DOM is updated with result from Line 40, GOTO to Line 38
     } else {
-      var result = randNumb * 3 + 1;
-      document.getElementById("Odds").innerHTML = `${result}`;
+      var result = randNumb * 3 + 1; // If 2nd variable is ODD, multiply by 3 and add 1
+      document.getElementById("Odds").innerHTML = `${result}`; // >>>>> DOM is updated with result from Line 43, GOTO Line 38
     }
-    document.getElementById("Results").innerHTML = `<strong>${result}<strong>`;
+    document.getElementById("Results").innerHTML = `<strong>${result}<strong>`; // >>>>> Once 2nd variable == 1, update DOM & END WHILE LOOP!!
   }
 }
