@@ -1,4 +1,4 @@
-// Step 78
+// Steps 78 & 92
 function randomNum() {
   var randNumA = Math.floor(Math.random() * 11); //  Random integer between 0 & 10
   var randNumB = randNumA + 2; //  Random integer between 0 & 12
@@ -8,7 +8,7 @@ function randomNum() {
   ).innerHTML = `[(${randNumA} + ${randNumB}) &#247 ${randNumA}] x ${randNumB} = <strong>${result}<strong>`; // Places the result in the DOM
 }
 
-// Step 80
+// Steps 80 & 92
 function subtraction() {
   var numB = Math.floor(Math.random() * 21) + 1; // Random integer between 1 & 20
   var numA = numB * 2 + 3; // Random integer
@@ -16,7 +16,7 @@ function subtraction() {
   document.getElementById("Subtraction").innerHTML = `${numA} - ${numB} = <strong>${difference}<strong>`; // Places the result in the DOM
 }
 
-// Step 82
+// Steps 82 & 92
 function multiplication() {
   var numA = Math.floor(Math.random() * 11); //  Random integer between 0 & 10
   var numB = numA + 2;
@@ -30,7 +30,7 @@ function division() {
   document.getElementById("Division").innerHTML = `${dividend} &#247 ${divisor} = <strong>${quotient}<strong>`;
 }
 
-// Steps 84 & 86
+// Steps 84, 86 & 92
 function allAtOnce() {
   var randNumb = Math.floor(Math.random() * 4) + 1; // Random integer between 1 & 3
   document.getElementById("RandNumb").innerHTML = `<strong>${randNumb}<strong>`; // >>>>> DOM is updated with the chosen random number
@@ -50,13 +50,13 @@ function allAtOnce() {
   }
 }
 
-// Step 88:
+// Steps 88 & 92:
 function negation() {
   var operand = Math.floor(Math.random() * 101) + 1; //  Random integer between 1 & 100
   document.getElementById("negation").innerHTML = `The value: ${operand}... <br>`; // >>> DOM is updated with the chosen random number
   document.getElementById("Negation").innerHTML = `...becomes <strong>${-operand}<strong>!`;
 }
-// Step 90
+// Steps 90 & 92
 function increment() {
   var randNum = Math.floor(Math.random() * 101) + 1; // Random integer between 1 & 100
   var newRandNum = randNum--; // "++" DECREASES randNum by 1, but "--" is INCREASING it - weird
