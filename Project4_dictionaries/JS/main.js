@@ -6,6 +6,8 @@ function dictionary() {
     Make: "Audi",
     Model: "A4",
     Engine: "Hybrid",
+    Engine: "Manual",
+    Engine: "None/Missing",
     Cyclinders: 4,
     Transmission: "Auto",
     Insured: "True",
