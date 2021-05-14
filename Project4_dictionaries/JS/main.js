@@ -16,5 +16,6 @@ function dictionary() {
     ExteriorColor: "Black",
     Mileage: 24000,
   };
+  delete Vehicle.Engine;
   document.getElementById("Dictionary").innerHTML = Vehicle.Engine;
 }
