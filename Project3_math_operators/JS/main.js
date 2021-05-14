@@ -59,14 +59,16 @@ function negation() {
 // Steps 90 & 92
 function increment() {
   var randNum = Math.floor(Math.random() * 101) + 1; // Random integer between 1 & 100
-  var newRandNum = randNum--; // "++" DECREASES randNum by 1, but "--" is INCREASING it - weird
+  var newRandNum = randNum; // "++" was DECREASING randNum by 1 & "--" is INCREASED it, so operator moved to seperate line
+  newRandNum++;
   document.getElementById(
     "Increment",
   ).innerHTML = `The value ${randNum} was <em>incremented</em> (by one) to ${newRandNum}.`;
 }
 function decrement() {
   var randNumb = Math.floor(Math.random() * 101) + 1; // Random integer between 1 & 100
-  var newRandNumb = randNumb++; // Same as above; "--" INCREASES randNumb by 1, while "++" DECREASES it
+  var newRandNumb = randNumb; // Same as above; "--" INCREASED randNumb by 1, while "++" DECREASED it; same solution
+  newRandNumb--;
   document.getElementById(
     "Decrement",
   ).innerHTML = `The value ${randNumb} has been <em>decremented</em> (by one) to ${newRandNumb}.`;
