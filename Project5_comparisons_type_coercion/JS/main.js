@@ -12,3 +12,8 @@ document.write("one" + 1);
 document.write("one" + "one");
 
 //Step 108:
+function NaNChallenge() {
+  document.getElementById("Test1").innerHTML = `Is "0 &#247 0" a Number, or NaN?  Answer: ${0 / 0}`; // part 1
+  document.getElementById("Test2").innerHTML = `"1 + two" is NaN, True or False? Answer: ${isNaN(1 + "two")}`; // part 2
+  document.getElementById("Test3").innerHTML = `"1 + 2" is NaN, True or False?  Answer: ${isNaN(1 + 2)}`; // part 3
+}
