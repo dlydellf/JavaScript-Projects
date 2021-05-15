@@ -13,11 +13,13 @@ document.write("one" + "one");
 
 // Step 108:
 function NaNChallenge() {
-  document.getElementById("Test1").innerHTML = `Is "0 &#247 0" a Number, or NaN?  Answer: <strong>${0 / 0}</strong>`; // part 1
-  document.getElementById("Test2").innerHTML = `"1 + two" is NaN, True or False? Answer: <strong>${isNaN(
+  document.getElementById("Test1").innerHTML = `Part 1: Is "0 &#247 0" a Number, or NaN?  Answer: <strong>${
+    0 / 0
+  }</strong>`; // part 1
+  document.getElementById("Test2").innerHTML = `Part 2: "1 + two" is NaN, True or False? Answer: <strong>${isNaN(
     1 + "two",
   )}</strong>`; // part 2
-  document.getElementById("Test3").innerHTML = `"1 + 2" is NaN, True or False?  Answer: <strong>${isNaN(
+  document.getElementById("Test3").innerHTML = `Part 3: "1 + 2" is NaN, True or False?  Answer: <strong>${isNaN(
     1 + 2,
   )}</strong>`; // part 3
 }
@@ -68,11 +70,33 @@ function doubleEqualT() {
   }
 }
 function doubleEqualF() {
-  if (1 == "one") {
-    document.getElementById("doubleEqualF").innerHTML = "This sentence shouldn't display";
+  if ("one" == 1) {
+    document.getElementById("doubleEqualF").innerHTML = "This sentence shouldn't display"; // ...because the condition's logic isn't true!
   } else {
     document.getElementById(
       "doubleEqualF",
-    ).innerHTML = `Does the string "one" == (equal, by value) 1?  Answer: <strong>${1 == "one"}</strong>`;
+    ).innerHTML = `Does the string "one" == (equal, by value) 1?  Answer: <strong>${"one" == 1}</strong>`;
   }
+}
+function tripleEqual() {
+  document.getElementById(
+    "PartA",
+  ).innerHTML = `Part A: Does 2 === (10 &#247 5) in both data type AND value?  Answer: <strong>${
+    2 === 10 / 5
+  }</strong>`;
+  document.getElementById(
+    "PartB",
+  ).innerHTML = `Part B: Does 2 (value: 2, dataType: number) === Twenty-one (value:21, dataType: string)?  Answer: <strong>${
+    2 === "Twenty-one"
+  }</strong>`;
+  document.getElementById(
+    "PartC",
+  ).innerHTML = `Part C: Does 2 (value: 2, dataType: number)=== "Two" (value: 2, dataType: string)?  Answer: <strong>${
+    2 === "Two"
+  }</strong>`;
+  document.getElementById(
+    "PartD",
+  ).innerHTML = `Part D: Does "Money" (dataType: string, value:"Money") === "Happiness" (dataType: string, value: "Happiness")?  Answer: <strong>${
+    "Money" === "Happiness"
+  }</strong>`;
 }
