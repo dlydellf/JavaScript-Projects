@@ -13,9 +13,13 @@ document.write("one" + "one");
 
 // Step 108:
 function NaNChallenge() {
-  document.getElementById("Test1").innerHTML = `Is "0 &#247 0" a Number, or NaN?  Answer: ${0 / 0}`; // part 1
-  document.getElementById("Test2").innerHTML = `"1 + two" is NaN, True or False? Answer: ${isNaN(1 + "two")}`; // part 2
-  document.getElementById("Test3").innerHTML = `"1 + 2" is NaN, True or False?  Answer: ${isNaN(1 + 2)}`; // part 3
+  document.getElementById("Test1").innerHTML = `Is "0 &#247 0" a Number, or NaN?  Answer: <strong>${0 / 0}</strong>`; // part 1
+  document.getElementById("Test2").innerHTML = `"1 + two" is NaN, True or False? Answer: <strong>${isNaN(
+    1 + "two",
+  )}</strong>`; // part 2
+  document.getElementById("Test3").innerHTML = `"1 + 2" is NaN, True or False?  Answer: <strong>${isNaN(
+    1 + 2,
+  )}</strong>`; // part 3
 }
 
 // Step 111:
@@ -29,24 +33,46 @@ function Infini() {
 // Step 113:
 function greaterThan() {
   if (2 > 1) {
-    document.getElementById("Greater").innerHTML = `Is 2 > 1?  Answer: ${2 > 1}`;
+    document.getElementById("Greater").innerHTML = `Is 2 > 1?  Answer: <strong>${2 > 1}</strong>`;
   }
 }
 function lessThan() {
   if (1 < 2) {
-    document.getElementById("Less").innerHTML = `Is one < two?  Answer: ${1 < 2}`;
+    document.getElementById("Less").innerHTML = `Is one < two?  Answer: <strong>${1 < 2}</strong>`;
   }
 }
 
 // Step 115:
 let index = 0;
 while (index < 11) {
-  console.log(index);
+  console.log(`Step 115: ${index}`);
   index++;
 }
 
 // Step 116:
 let a;
 if (a == a) {
-  console.log(`${1 != 1}`);
+  console.log(`Step 116: ${1 != 1}`);
+}
+
+// Step 118:
+var that;
+var somethingElse;
+var This = that;
+that = somethingElse;
+function doubleEqualT() {
+  if (This == somethingElse) {
+    document.getElementById("doubleEqualT").innerHTML = `Does the string "1" == (equal, by value) 1?  Answer: <strong>${
+      This == somethingElse
+    }</strong>`;
+  }
+}
+function doubleEqualF() {
+  if (1 == "one") {
+    document.getElementById("doubleEqualF").innerHTML = "This sentence shouldn't display";
+  } else {
+    document.getElementById(
+      "doubleEqualF",
+    ).innerHTML = `Does the string "one" == (equal, by value) 1?  Answer: <strong>${1 == "one"}</strong>`;
+  }
 }
