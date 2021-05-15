@@ -46,6 +46,7 @@ while (index < 11) {
 }
 
 // Step 116:
-if (0 != 1) {
-  console.log(`${0 != 1}`);
+let a;
+if (a == a) {
+  console.log(`${1 != 1}`);
 }
