@@ -44,3 +44,8 @@ while (index < 11) {
   console.log(index);
   index++;
 }
+
+// Step 116:
+if (0 != 1) {
+  console.log(`${0 != 1}`);
+}
