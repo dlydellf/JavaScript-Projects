@@ -26,6 +26,7 @@ function Infini() {
   document.getElementById("Infini").innerHTML = -888e888;
 }
 
+// Step 113:
 function greaterThan() {
   if (2 > 1) {
     document.getElementById("Greater").innerHTML = `Is 2 > 1?  Answer: ${2 > 1}`;
@@ -35,4 +36,11 @@ function lessThan() {
   if (1 < 2) {
     document.getElementById("Less").innerHTML = `Is one < two?  Answer: ${1 < 2}`;
   }
+}
+
+// Step 115:
+let index = 0;
+while (index < 11) {
+  console.log(index);
+  index++;
 }
