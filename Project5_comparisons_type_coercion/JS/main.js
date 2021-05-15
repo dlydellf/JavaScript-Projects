@@ -125,6 +125,6 @@ function or() {
   document.getElementById(
     "orF",
   ).innerHTML = `For OR: True or False: (2 is less than 1 || 1 is greater than 1)?  Answer: <strong>${
-    2 < 1 || 1 > 2
+    2 < 1 || 1 > 21
   }</strong>`;
 }
