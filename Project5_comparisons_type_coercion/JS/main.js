@@ -25,3 +25,14 @@ function Infin() {
 function Infini() {
   document.getElementById("Infini").innerHTML = -888e888;
 }
+
+function greaterThan() {
+  if (2 > 1) {
+    document.getElementById("Greater").innerHTML = `Is 2 > 1?  Answer: ${2 > 1}`;
+  }
+}
+function lessThan() {
+  if (1 < 2) {
+    document.getElementById("Less").innerHTML = `Is one < two?  Answer: ${1 < 2}`;
+  }
+}
