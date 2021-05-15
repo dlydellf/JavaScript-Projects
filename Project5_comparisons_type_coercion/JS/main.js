@@ -78,6 +78,8 @@ function doubleEqualF() {
     ).innerHTML = `Does the string "one" == (equal, by value) 1?  Answer: <strong>${"one" == 1}</strong>`;
   }
 }
+
+// Step 120:
 function tripleEqual() {
   document.getElementById(
     "PartA",
@@ -98,5 +100,31 @@ function tripleEqual() {
     "PartD",
   ).innerHTML = `Part D: Does "Money" (dataType: string, value:"Money") === "Happiness" (dataType: string, value: "Happiness")?  Answer: <strong>${
     "Money" === "Happiness"
+  }</strong>`;
+}
+
+// Step 122:
+function and() {
+  document.getElementById(
+    "andT",
+  ).innerHTML = `For AND: Is (1 less than 2 && 2 greater than 1) True or False?  Answer: <strong>${
+    1 < 2 && 2 > 1
+  }</strong>`;
+  document.getElementById(
+    "andF",
+  ).innerHTML = `For AND: Is (1 less than 2 && 2 less than 1) True or False?  Answer: <strong>${
+    1 < 2 && 2 < 1
+  }</strong>`;
+}
+function or() {
+  document.getElementById(
+    "orT",
+  ).innerHTML = `For OR: True or False:  (1 is less than 2 || 2 is less than 1)?  Answer: <strong>${
+    1 < 2 || 2 < 1
+  }</strong>`;
+  document.getElementById(
+    "orF",
+  ).innerHTML = `For OR: True or False: (2 is less than 1 || 1 is greater than 1)?  Answer: <strong>${
+    2 < 1 || 1 > 2
   }</strong>`;
 }
