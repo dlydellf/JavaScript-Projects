@@ -19,3 +19,12 @@ function get_Date() {
     document.getElementById("TodayIs").innerHTML = "Today is turning into tomorrow.";
   }
 }
+
+// Step 146:
+function myIf() {
+  if (document.getElementById("MyIfStatementsOutput").onClick) {
+    document.getElementById("MyIfStatementsOutput").innerHTML = "Click HERE for your own example of an if statement."; // This only displays with the ! operator
+  } else {
+    document.getElementById("MyIfStatementsOutput").innerHTML = "This text proves that you've clicked."; // Didn't expect this to display; the conditional is true
+  }
+}
