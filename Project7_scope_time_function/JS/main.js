@@ -35,8 +35,8 @@ function myIf() {
 function my2ndIf() {
   var number = document.getElementById("ChosenNumber").value; // Obtain user's input
   console.log(number);
-  if (number == NaN) {
-    document.getElementById("TheOutput").innerHTML = "Please, chose a number"; // I can't get this to display; Line 37's console.log shows "", but that doesn't work.  Nether does "null", "undefined", or even hard-coding a number (like "if (number == 2) {...}")
+  if (number == "") {
+    document.getElementById("TheOutput").innerHTML = "Please, chose a number"; // I can't get this text to display; if the input box is left empty, Line 37's console.log shows "", but the text won't display.
   } else if (number % 2 == 0) {
     // 2nd Conditional statement
     var reply = " EVEN"; // the TRUE output
