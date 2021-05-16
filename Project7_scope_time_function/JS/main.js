@@ -6,7 +6,7 @@ function global() {
   console.log(`This ${globalVariable} a global variable.`);
 }
 function local() {
-  console.log(`This ${localVariable} a global variable`); // References a variable tat's unavailable because of its local scope
+  console.log(`This ${localVariable} a global variable`); // References a variable that's unavailable because of its local scope
 }
 global();
 // local();
