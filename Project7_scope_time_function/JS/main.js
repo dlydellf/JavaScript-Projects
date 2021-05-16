@@ -12,7 +12,7 @@ global();
 // local();
 
 // Step 145:
-function get_date() {
+function get_Date() {
   if (new Date().getHours() < 18) {
     document.getElementById("TodayIs").innerHTML = "Yesterday has become... today.";
   } else {
