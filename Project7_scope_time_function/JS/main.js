@@ -29,3 +29,16 @@ function myIf() {
       "This text shouldn't be displaying; my conditional statement has a logic error."; // Didn't expect this to display; the conditional isn't false
   }
 }
+
+// Step 148:
+function my2ndIf() {
+  var number = document.getElementById("ChosenNumber").value; // Obtain user's input
+  if (number % 2 == 0) {
+    // Conditional statement
+    var reply = " EVEN"; // the TRUE output
+  } else {
+    var reply = " ODD"; // the FALSE output
+  }
+  document.getElementById("TheOutput").innerHTML = `You chose <strong>${number}</strong>, an ${reply} number.`;
+  // Return output
+}
