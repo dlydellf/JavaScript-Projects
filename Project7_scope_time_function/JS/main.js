@@ -1,15 +1,16 @@
 // Step 141:
-var globalVariable = "is"; // Variable's scope is global, throughout the main.js
+var globalVariable = "is"; // Variable's scope is GLOBAL, throughout the main.js
 
 function global() {
   var localVariable = "isn't"; // Variable's scope is LOCAL to this function only
   console.log(`This ${globalVariable} a global variable.`);
 }
 function local() {
-  console.log(`This ${localVariable} a global variable`); // References a variable that's unavailable because of its local scope
+  // This is the INTENTIONALLY BUGGED function
+  console.log(`This ${localVariable} a global variable`); // Console.log shows function references a variable that's unavailable (because of its local scope)
 }
 global();
-// local();
+//local(); // Uncomment this function call to display the error in the console
 
 // Step 145:
 function get_Date() {
