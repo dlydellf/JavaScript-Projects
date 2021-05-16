@@ -29,7 +29,7 @@ function myFunction() {
     "Erik drives a " + Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model + " manufactured in " + Erik.Vehicle_Year;
 }
 
-// Step 133:
+// Steps 133 & 135:
 function Desk(Material, Type, Color, Retailer) {
   this.Desk_Material = Material;
   this.Desk_Type = Type;
