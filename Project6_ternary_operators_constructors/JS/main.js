@@ -28,3 +28,21 @@ function myFunction() {
   document.getElementById("Keywords_and_Constructors").innerHTML =
     "Erik drives a " + Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model + " manufactured in " + Erik.Vehicle_Year;
 }
+
+// Step 133:
+function Desk(Material, Type, Color, Retailer) {
+  this.Desk_Material = Material;
+  this.Desk_Type = Type;
+  this.Desk_Color = Color;
+  this.Desk_Retailer = Retailer;
+}
+
+var A101 = new Desk("wood", "Drafting", "white", "Amazon");
+var B202 = new Desk("metal", "Conference", "grey", "Office Depot");
+var C303 = new Desk("glass", "Home_Office", "clear", "HSN");
+var D404 = new Desk("plastic", "Children", "orange", "Walmart");
+function ourDesks() {
+  document.getElementById(
+    "New_and_This",
+  ).innerHTML = `Our all-${A101.Desk_Color}, ${A101.Desk_Type} desks made from ${A101.Desk_Material} are now available at ${A101.Desk_Retailer}!`;
+}
