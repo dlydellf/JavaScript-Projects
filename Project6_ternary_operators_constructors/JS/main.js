@@ -46,3 +46,15 @@ function ourDesks() {
     "New_and_This",
   ).innerHTML = `Our all-${A101.Desk_Color}, ${A101.Desk_Type} desks made from ${A101.Desk_Material} are now available at ${A101.Desk_Retailer}!`;
 }
+
+// Step 138:
+var i;
+var j;
+function parentFunction() {
+  for (i = 0; i < 3; i++) {
+    childFunction();
+  }
+}
+function childFunction() {
+  document.getElementById("Nested_Function").innerHTML = `${i + 1}`;
+}
