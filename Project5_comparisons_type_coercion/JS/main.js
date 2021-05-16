@@ -128,3 +128,15 @@ function or() {
     2 < 1 || 1 > 21
   }</strong>`;
 }
+
+// Step 124:
+function notT() {
+  document.getElementById("NotT").innerHTML = `True or False: Is "!(10 < 1)" (10 NOT less than 1)?  Answer: <strong>${!(
+    10 < 1
+  )}</strong>`;
+}
+function notF() {
+  document.getElementById(
+    "NotF",
+  ).innerHTML = `True or False: Is "!(10 > 1)" (10 NOT greater than 1)?  Answer: <strong>${!(10 > 1)}</strong>`;
+}
