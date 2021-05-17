@@ -32,12 +32,15 @@
     <p id="NumberToString"></p>
     <hr>
     <p>Step 163 (toPrecision):</p>
-    <p>Choose a single number below (3-10), and a random number will be<br> reformatted to display the exact number of digits you entered.</p>
-    <input id="SingleNumr" type="number" placeholder="# ???" min="3" max="10" value=""></input><br>
-    <p id="OriginalRandomNumr"></p>
-    <button id="TheButton" onClick="toRandomNumr()">Click ME</button>
-    <p id="NewRandomNumr"></p>
+    <p>Choose a single number below (3-58), and a random number will be<br> reformatted to display the exact number of digits you entered.</p>
+    <input id="ChosenNumber" type="number" placeholder="# ???" min="3" max="58" value=""></input><br>
+    <p id="RandomNumber"></p>
+    <button id="Button163" onClick="toRandomNumr()">Click ME</button>
+    <p id="PreciseNumber"></p>
     <hr>
     <p>Step 164 (toFixed & valueOf):</p>
+    <p>Click, and the random number (above) will be rounded to the specificed number of decimals.</p>
+    <p id="FixedNumber"></p>
+    <button id="Button164" onClick="displayError()">Noc HERE</button>
   </body>
 </html>
