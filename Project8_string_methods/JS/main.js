@@ -2,7 +2,7 @@
 function concatenate() {
   var beginning = "This sentence ";
   var middle = "is actually 3 strings that were";
-  var end = " concatenated together, onto one.";
+  var end = " concatenated together, into one.";
   var result = beginning.concat(middle, end); // The concate method, combining all three strings into one
   document.getElementById("Concatenate").innerHTML = result;
 }
@@ -22,8 +22,21 @@ function search() {
   var findThis = document.getElementById("ChosenWord").value.toUpperCase(); // the word being searched for is converted into upper case
   var itsIndex = document.getElementById("RegularCase").innerHTML.toUpperCase().search(findThis); // Since #UpperCase may be empty, go to its source (#RegularCase) and capitalize IT instead, then perform the search; assigning result to a variable
   if (itsIndex == -1) {
-    document.getElementById("Position").innerHTML = "What you typed wasn't found";
+    document.getElementById("Position").innerHTML = "<strong>What you typed wasn't found!</strong>";
   } else {
     document.getElementById("Position").innerHTML = itsIndex;
+  }
+}
+
+// Step 161:
+function toAString() {
+  var startingText = document.getElementById("ChosenNumber").value;
+  var startingNumber = parseInt(startingText);
+  console.log(startingNumber);
+  if (isNaN(startingNumber)) {
+    document.getElementById("NumberToString").innerHTML =
+      "<strong>Please do not enter text; digits (0-9) only</strong>";
+  } else {
+    document.getElementById("NumberToString").innerHTML = startingNumber.toString();
   }
 }
