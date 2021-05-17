@@ -36,7 +36,7 @@ function toAString() {
   if (isNaN(startingNumber)) {
     // Is User's input something other than 0-9 and is returning -1?!?
     document.getElementById("NumberToString").innerHTML =
-      "<strong>Please do not enter text; digits (0-9) only</strong>";
+      "<strong>Please do not enter text, or leave blank; use digits (0-9) only</strong>";
   } else {
     document.getElementById("NumberToString").innerHTML = startingNumber.toString();
   }
@@ -44,22 +44,39 @@ function toAString() {
 
 // Step 163:
 function toRandomNumr() {
-  var Base = document.getElementById("SingleNumr").value; // User's input
-  if (Base > 58) {
-    // MAX workable numbr is 58!!
-    document.getElementById("OriginalRandomNumr").innerHTML =
-      "Absolutely not.  Please keep your number choices below 59";
-  } else {
-    var Exp = Base * 3; // Max Base is 58, so max exponent is 174, < Infinity's 1e+308
-    var randomNumr = Math.pow(Base, Exp); // What will get the toPrecision() method
+  var chosenNumr = document.getElementById("ChosenNumber").value; // User's input;
+  if (chosenNumr > 58) {
+    // ERROR - they chose too high
+    document.getElementById("RandomNumber").innerHTML = "Absolutely not.  Please keep your number choices below 59";
+  } else if (chosenNumr <= 2) {
+    // ERROR - they chose too low
     document.getElementById(
-      "OriginalRandomNumr",
-    ).innerHTML = `The random number <strong>${randomNumr}</strong> has been reformatted to only show <strong>${Base}</strong> digits...`;
-
-    document.getElementById("TheButton").onClick = precision(Base, randomNumr); // One click for 2 functions; passing parameters outside local scope
+      "RandomNumber",
+    ).innerHTML = `This works best if you choose a number <strong>greater than 2</strong>.`;
+  } else {
+    var Exp = chosenNumr * 3; // Max chosenNumr is 58, so max exponent is 174, < Infinity's 1e+308
+    var randomNumr = Math.pow(chosenNumr, Exp); // What the toPrecision() method will be applied to
+    document.getElementById(
+      "RandomNumber",
+    ).innerHTML = `The random number <strong>${randomNumr}</strong> has been reformatted to only show <strong>${chosenNumr}</strong> digits...`;
+    /*
+    document.getElementById("TheButton").onClick = precision(chosenNumr, randomNumr); // Failed attempt at reassigning the "precision" function when TheButton was clicked a 2nd time; (side-effect: passed parameters outside their local scope)
+    }
+  }
+function precision(chosenNumr, randomNumr) { */
+    var preciseNumr = randomNumr.toPrecision(chosenNumr); // What really matters...
+    document.getElementById("PreciseNumber").innerHTML = preciseNumr;
+    document.getElementById("Button163").onClick = toFixedMethod(chosenNumr, randomNumr);
   }
 }
-function precision(Base, randomNumr) {
-  var result = randomNumr.toPrecision(Base); // What really matters...
-  document.getElementById("NewRandomNumr").innerHTML = `...<strong>${result}</strong>`;
+
+// Step 164:
+function toFixedMethod(chosenNumr, randomNumr) {
+  var fixedNumr = randomNumr.toFixed(chosenNumr); // What really matters...
+  document.getElementById(
+    "FixedNumber",
+  ).innerHTML = `Here's your random number, (${randomNumr}), rounded to a "fixed" number of decimals, (<strong>${chosenNumr}</strong>): <br> <strong>${fixedNumr}</strong>`;
+}
+function displayError() {
+  console.log("Button's has no purpose");
 }
