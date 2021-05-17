@@ -1,3 +1,4 @@
+/*
 function countdown() {
   var seconds = document.getElementById("seconds").value;
 
@@ -11,4 +12,5 @@ function countdown() {
     }
   }
   tick();
-}
+}*/
+// Code above is for the COUNTDOWN; code below is for the SLIDESHOW
