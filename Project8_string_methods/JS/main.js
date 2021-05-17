@@ -31,12 +31,35 @@ function search() {
 // Step 161:
 function toAString() {
   var startingText = document.getElementById("ChosenNumber").value;
-  var startingNumber = parseInt(startingText);
+  var startingNumber = parseInt(startingText); // User's text converted into type==number
   console.log(startingNumber);
   if (isNaN(startingNumber)) {
+    // Is User's input something other than 0-9 and is returning -1?!?
     document.getElementById("NumberToString").innerHTML =
       "<strong>Please do not enter text; digits (0-9) only</strong>";
   } else {
     document.getElementById("NumberToString").innerHTML = startingNumber.toString();
   }
+}
+
+// Step 163:
+function toRandomNumr() {
+  var Base = document.getElementById("SingleNumr").value; // User's input
+  if (Base > 58) {
+    // MAX workable numbr is 58!!
+    document.getElementById("OriginalRandomNumr").innerHTML =
+      "Absolutely not.  Please keep your number choices below 59";
+  } else {
+    var Exp = Base * 3; // Max Base is 58, so max exponent is 174, < Infinity's 1e+308
+    var randomNumr = Math.pow(Base, Exp); // What will get the toPrecision() method
+    document.getElementById(
+      "OriginalRandomNumr",
+    ).innerHTML = `The random number <strong>${randomNumr}</strong> has been reformatted to only show <strong>${Base}</strong> digits...`;
+
+    document.getElementById("TheButton").onClick = precision(Base, randomNumr); // One click for 2 functions; passing parameters outside local scope
+  }
+}
+function precision(Base, randomNumr) {
+  var result = randomNumr.toPrecision(Base); // What really matters...
+  document.getElementById("NewRandomNumr").innerHTML = `...<strong>${result}</strong>`;
 }
