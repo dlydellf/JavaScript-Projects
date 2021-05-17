@@ -1,4 +1,4 @@
-// Step 156:
+// Step 159:
 function concatenate() {
   var beginning = "This sentence ";
   var middle = "is actually 3 strings that were";
@@ -6,13 +6,13 @@ function concatenate() {
   var result = beginning.concat(middle, end); // The concate method, combining all three strings into one
   document.getElementById("Concatenate").innerHTML = result;
 }
-// Step 158:
+// Step 161:
 function slice() {
   var string = document.getElementById("PreSlice").innerHTML;
   document.getElementById("PostSlice").innerHTML = string.slice(12, 20); // The slice method, beginning at index 12 and slicing until index 19
 }
 
-// Step 159:
+// Step 162:
 // Learned you can't assign "document.getElementById(id's name).innerHTML or just "document.getElementById(id's name)" to a variable
 function toUpperCase() {
   var string = document.getElementById("RegularCase").innerHTML;
@@ -28,9 +28,9 @@ function search() {
   }
 }
 
-// Step 161:
+// Step 164:
 function toAString() {
-  var startingText = document.getElementById("ChosenNumber").value;
+  var startingText = document.getElementById("ChosenNumber164").value;
   var startingNumber = parseInt(startingText); // User's text converted into type==number
   console.log(startingNumber);
   if (isNaN(startingNumber)) {
@@ -42,7 +42,7 @@ function toAString() {
   }
 }
 
-// Step 163:
+// Step 166:
 function toRandomNumr() {
   var chosenNumr = document.getElementById("ChosenNumber").value; // User's input;
   if (chosenNumr > 58) {
@@ -58,25 +58,28 @@ function toRandomNumr() {
     var randomNumr = Math.pow(chosenNumr, Exp); // What the toPrecision() method will be applied to
     document.getElementById(
       "RandomNumber",
-    ).innerHTML = `The random number <strong>${randomNumr}</strong> has been reformatted to only show <strong>${chosenNumr}</strong> digits...`;
+    ).innerHTML = `The random number <strong>${randomNumr}</strong> has been reformatted to only show <strong>${chosenNumr}</strong> digits, becoming...`;
     /*
-    document.getElementById("TheButton").onClick = precision(chosenNumr, randomNumr); // Failed attempt at reassigning the "precision" function when TheButton was clicked a 2nd time; (side-effect: passed parameters outside their local scope)
+    document.getElementById("Button166").onClick = precision(chosenNumr, randomNumr); // Failed attempt at reassigning the "precision" function when Button166 was clicked a 2nd time; (side-effect: passed parameters outside their local scope)
     }
   }
 function precision(chosenNumr, randomNumr) { */
     var preciseNumr = randomNumr.toPrecision(chosenNumr); // What really matters...
-    document.getElementById("PreciseNumber").innerHTML = preciseNumr;
-    document.getElementById("Button163").onClick = toFixedMethod(chosenNumr, randomNumr);
+    document.getElementById("PreciseNumber").innerHTML = `<strong>${preciseNumr}</strong>`;
+    document.getElementById("Button167").onClick = toFixed_Method(chosenNumr, randomNumr); // Using Button167 to pass on next function's arguments (instead of repeating the "random number" code); clicking Button167 breaks this chain
   }
 }
 
-// Step 164:
-function toFixedMethod(chosenNumr, randomNumr) {
+// Step 167:
+function toFixed_Method(chosenNumr, randomNumr) {
   var fixedNumr = randomNumr.toFixed(chosenNumr); // What really matters...
   document.getElementById(
     "FixedNumber",
-  ).innerHTML = `Here's your random number, (${randomNumr}), rounded to a "fixed" number of decimals, (<strong>${chosenNumr}</strong>): <br> <strong>${fixedNumr}</strong>`;
+  ).innerHTML = `Here, your random number (from above - <strong>${randomNumr}</strong>), has been rounded to a "fixed" number of decimals (<strong>${chosenNumr}</strong>), becoming...: <br> <strong>${fixedNumr}</strong>`;
 }
-function displayError() {
-  console.log("Button's has no purpose");
+function valueOf_Method() {
+  var RandomNumber = 123456789;
+  document.getElementById(
+    "ValueOfText",
+  ).innerHTML = `All of these numbers were assigned to their own <em>variable</em>, giving each variable a specific <em>value</em>.<br>Displaying any of those values can be done with the "valueOf" method, for example:<br><br> if (RandomNumber = "123,456,789"), then<br> {RandomNumber.<strong>valueOf()</strong> = ${RandomNumber.valueOf()}}`;
 }
