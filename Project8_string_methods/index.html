@@ -5,42 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="JS/main.js"></script>
-    <title>String Methods - (Steps 156 - 165)</title>
+    <title>String Methods - (Steps 159 - 168)</title>
   </head>
   <body>
-    <p>Step 156 (Concatenate):</p>
+    <p>Step 159 (Concatenate):</p>
     <p id="Concatenate"></p>
     <button onClick="concatenate()">Click HERE to concatenate a string</button>
     <hr />
-    <p>Step 158 (Slice):</p>
+    <p>Step 161 (Slice):</p>
     <p id="PreSlice">This string will be has been sliced.</p>
     <button onClick="slice()">Click HERE to display the sliced section of this string</button>
     <p id="PostSlice"></p>
     <hr />
-    <p>Step 159 (toUpperCase & Search):</p>
+    <p>Step 162 (toUpperCase & Search):</p>
     <p id="RegularCase">Is this string in all upper case?</p>
     <button onClick="toUpperCase()">Click HERE to display the string above in all upper case</button>
-    <p id="UpperCase"></p>
+    <p id="UpperCase"></p><br>
     <p>Type in any combo of characters from the string above:</p>
     <input id="ChosenWord" type="text" placeholder="Search string for..." value="" /><br />
-    <button onClick="search()">Click HERE to display your selection's earliest location</button>
+    <button onClick="search()">Click HERE to search for your selection's earliest location</button>
     <p id="Position"></p>
     <hr />
-    <p>Step 161 (toString):</p>
-    <input id="ChosenNumber" type="text" placeholder="Enter your number (0-9)" value=""></input><br>
+    <p>Step 164 (toString):</p>
+    <input id="ChosenNumber164" type="text" placeholder="Enter your number (0-9)" value=""></input><br>
     <button onClick="toAString()">Click HERE to display your number as a string</button>
     <p id="NumberToString"></p>
     <hr>
-    <p>Step 163 (toPrecision):</p>
+    <p>Step 166 (toPrecision):</p>
     <p>Choose a single number below (3-58), and a random number will be<br> reformatted to display the exact number of digits you entered.</p>
     <input id="ChosenNumber" type="number" placeholder="# ???" min="3" max="58" value=""></input><br>
+    <button id="Button166" onClick="toRandomNumr()">Click ME</button>
     <p id="RandomNumber"></p>
-    <button id="Button163" onClick="toRandomNumr()">Click ME</button>
     <p id="PreciseNumber"></p>
     <hr>
-    <p>Step 164 (toFixed & valueOf):</p>
-    <p>Click, and the random number (above) will be rounded to the specificed number of decimals.</p>
+    <p>Step 167 (toFixed & valueOf):</p>
     <p id="FixedNumber"></p>
-    <button id="Button164" onClick="displayError()">Noc HERE</button>
+    <button id="Button167" onClick="valueOf_Method()">Click HERE for the "valueOf" method</button>
+    <p id="ValueOfText"></p>
   </body>
 </html>
