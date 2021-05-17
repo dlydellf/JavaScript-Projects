@@ -27,11 +27,15 @@
     <p id="Position"></p>
     <hr />
     <p>Step 161 (toString):</p>
-    <input id="ChosenNumber" type="text" placeholder="Type number as digits (0-9)" value=""></input><br>
+    <input id="ChosenNumber" type="text" placeholder="Enter your number (0-9)" value=""></input><br>
     <button onClick="toAString()">Click HERE to display your number as a string</button>
     <p id="NumberToString"></p>
     <hr>
     <p>Step 163 (toPrecision):</p>
-    
+    <p>Choose a single number below (3-10), and a random number will be<br> reformatted to display the exact number of digits you entered.</p>
+    <input id="SingleNumr" type="number" placeholder="# ???" min="3" max="10" value=""></input><br>
+    <p id="OriginalRandomNumr"></p>
+    <button id="TheButton" onClick="toRandomNumr()">Click ME</button>
+    <p id="NewRandomNumr"></p>
   </body>
 </html>
