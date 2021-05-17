@@ -11,3 +11,9 @@ function slice() {
   var string = document.getElementById("PreSlice").innerHTML;
   document.getElementById("PostSlice").innerHTML = string.slice(12, 20);
 }
+
+// Step 159:
+function toUpperCase() {
+  var string = document.getElementById("RegularCase").innerHTML;
+  document.getElementById("UpperCase").innerHTML = string.toUpperCase();
+}
