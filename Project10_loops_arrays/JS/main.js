@@ -76,3 +76,16 @@ function theReturnStatement() {
   console.log(`Coming after the RETURN statement, this: ${reply} will not be logged.`);
 }
 theReturnStatement();
+
+// Step 223:
+function objectAssignment() {
+  let room = {
+    walls: "4",
+    windows: "5",
+    doors: "6",
+    description: function () {
+      return `This room has ${room.walls} walls, ${room.windows} windows, and ${room.doors} doors.`;
+    },
+  };
+  document.getElementById("Step223").innerHTML = room.description();
+}
