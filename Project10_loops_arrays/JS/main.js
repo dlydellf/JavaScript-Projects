@@ -51,3 +51,15 @@ function constant_function() {
     "Constant",
   ).innerHTML = `The <u>${Earth.order_from_Sun}</u> planet from the Sun has <u>${Earth.moons}</u> moon, yet contains <u>${Earth.lifeforms}</u> forms of life; its habitability-rating is therefore <u>${Earth.habitable}</u>, while the <u>${Jupiter.order_from_Sun}</u> planet from the Sun has <u>${Jupiter.moons}</u> moons, yet contains <u>${Jupiter.lifeforms}</u> forms of life; its habitability-rating is therefore <u>${Jupiter.habitable}</u>.`;
 }
+
+// Step 217:
+function example() {
+  var a = "1";
+  console.log(a);
+  {
+    let a = "2";
+    console.log(a);
+  }
+  console.log(a);
+}
+example();
