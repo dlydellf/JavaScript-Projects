@@ -55,11 +55,24 @@ function constant_function() {
 // Step 217:
 function example() {
   var a = "1";
-  console.log(a);
+  console.log(`This VAR has functional scope, so its value ("a=${a}") gets logged.`);
   {
     let a = "2";
-    console.log(a);
-  } 
-  console.log(a);
+    console.log(`This LET has block scope, so its value ("a=${a}") gets logged only here, not below.`);
+  }
+  console.log(
+    `This console.log is outside the above LET's code block, so only the functionally scoped VAR's value ("a=${a}") gets logged.`,
+  );
 }
 example();
+
+// Step 220:
+function theReturnStatement() {
+  let letters = "ABCDEFG";
+  let response = letters.toLowerCase();
+  console.log(`Being prior to the RETURN statement, only this: "${response}" gets logged.`);
+  return;
+  let reply = response.toUpperCase();
+  console.log(`Coming after the RETURN statement, this: ${reply} will not be logged.`);
+}
+theReturnStatement();
