@@ -16,3 +16,12 @@ function String_Length() {
     "Length",
   ).innerHTML = `The length of the string "${string}" is:<br><u><strong>${string.length}</strong></u> characters.`;
 }
+
+// Step 203:
+function for_Loop() {
+  var text = "";
+  for (var i = 1; i < 6; i++) {
+    text += `${i}.  List the #${i} instrument's owner here: ________<br>`;
+    document.getElementById("List_of_Instruments").innerHTML = text;
+  }
+}
