@@ -26,7 +26,7 @@ function for_Loop() {
   }
 }
 
-// Step 207
+// Step 207:
 function array_Function() {
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var text = "";
@@ -36,4 +36,14 @@ function array_Function() {
     }.  Over and over.  This never stops...<br>`;
     document.getElementById("Array").innerHTML = text;
   }
+}
+
+// Step 215:
+const Earth = { order_from_Sun: "3rd", moons: 1, nominal_gravational_acceleration: 9.807, lifeforms: "various" };
+const Jupiter = { order_from_Sun: "5th", moons: 79, nominal_gravational_acceleration: 24.79, lifeforms: "none" };
+
+function constant_function() {
+  document.getElementById(
+    "Constant",
+  ).innerHTML = `The <u>${Earth.order_from_Sun}</u> planet from the Sun contains <u>${Earth.lifeforms}</u> forms of life, while the <u>${Jupiter.order_from_Sun}</u> planet from the Sun contains <u>${Jupiter.lifeforms}</u> forms of life.`;
 }
