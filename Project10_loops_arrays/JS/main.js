@@ -38,12 +38,16 @@ function array_Function() {
   }
 }
 
-// Step 215:
+// Step 215 (3, a-c):
 const Earth = { order_from_Sun: "3rd", moons: 1, nominal_gravational_acceleration: 9.807, lifeforms: "various" };
 const Jupiter = { order_from_Sun: "5th", moons: 79, nominal_gravational_acceleration: 24.79, lifeforms: "none" };
+// (5,a-d):
+Earth.lifeforms = "numerous";
+Earth.habitable = "True";
+Jupiter.habitable = "False";
 
 function constant_function() {
   document.getElementById(
     "Constant",
-  ).innerHTML = `The <u>${Earth.order_from_Sun}</u> planet from the Sun contains <u>${Earth.lifeforms}</u> forms of life, while the <u>${Jupiter.order_from_Sun}</u> planet from the Sun contains <u>${Jupiter.lifeforms}</u> forms of life.`;
+  ).innerHTML = `The <u>${Earth.order_from_Sun}</u> planet from the Sun has <u>${Earth.moons}</u> moon, yet contains <u>${Earth.lifeforms}</u> forms of life; its habitability-rating is therefore <u>${Earth.habitable}</u>, while the <u>${Jupiter.order_from_Sun}</u> planet from the Sun has <u>${Jupiter.moons}</u> moons, yet contains <u>${Jupiter.lifeforms}</u> forms of life; its habitability-rating is therefore <u>${Jupiter.habitable}</u>.`;
 }
