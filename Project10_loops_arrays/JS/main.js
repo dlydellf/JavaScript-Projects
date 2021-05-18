@@ -25,3 +25,15 @@ function for_Loop() {
     document.getElementById("List_of_Instruments").innerHTML = text;
   }
 }
+
+// Step 207
+function array_Function() {
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var text = "";
+  for (var i = 0; i < days.length - 1; i++) {
+    text += `If today is ${days[i]}, then tomorrow <em>will be</em> ${
+      days[i + 1]
+    }.  Over and over.  This never stops...<br>`;
+    document.getElementById("Array").innerHTML = text;
+  }
+}
