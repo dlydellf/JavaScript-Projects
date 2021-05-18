@@ -89,3 +89,15 @@ function objectAssignment() {
   };
   document.getElementById("Step223").innerHTML = room.description();
 }
+
+// Step 224:
+function continueStatement() {
+  let text = "";
+  for (let i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+      continue;
+    }
+    text += `${[i]} <br>`;
+  }
+  document.getElementById("Continue").innerHTML = text;
+}
