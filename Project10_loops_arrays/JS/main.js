@@ -91,6 +91,21 @@ function objectAssignment() {
 }
 
 // Step 224:
+function breakStatement() {
+  let text = "";
+  let i = 1;
+  while (i > 0) {
+    text += `${[i]}. `;
+    document.getElementById("Break").innerHTML = `Let's count to a trillion! Ready?<br>${text} `;
+    i++;
+    if (i == 4) {
+      text = "Ok, that's far enough.";
+      document.getElementById("Break").innerHTML += text;
+      break;
+    }
+  }
+}
+
 function continueStatement() {
   let text = "";
   for (let i = 0; i < 10; i++) {
