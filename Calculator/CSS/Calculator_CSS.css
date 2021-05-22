@@ -62,3 +62,15 @@ button:hover {
   background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.5));
   background-color: lightsteelblue;
 }
+
+/*AC ("All Clear" button) */
+.all-clear {
+  background-color: red;
+  border-color: darkslategrey;
+  color: #fff;
+}
+
+/*AC button's hover effect*/
+.all-clear:hover {
+  background-color: darkred;
+}
