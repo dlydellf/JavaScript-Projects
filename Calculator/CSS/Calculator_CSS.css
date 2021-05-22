@@ -1,0 +1,14 @@
+/* Sets .html's elements' font size; any added padding/border gets included in element's total size */
+html {
+  font-size: 70%;
+  box-sizing: border-box;
+}
+
+/* Spacing added to all elements, before & after */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
