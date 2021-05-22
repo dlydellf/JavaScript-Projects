@@ -12,3 +12,14 @@ html {
   padding: 0;
   box-sizing: inherit;
 }
+
+/* Curved border around now-centered & absolutely positioned calculator */
+.calculator {
+  border: 1.2px solid darkslategray;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
