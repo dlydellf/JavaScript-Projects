@@ -88,3 +88,11 @@ button:hover {
 .equal-sign:hover {
   background-color: darkblue;
 }
+
+/* All keys (proper spacing) */
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
