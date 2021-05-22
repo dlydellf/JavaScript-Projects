@@ -20,7 +20,7 @@ function Input_Digit(digit) {
   to the key that was clicked */
   if (Wait_Second_Operand === true) {
     Calculator.Display_Value = digit
-    Calculator,.Wait_Second_Operand = false
+    Calculator.Wait_Second_Operand = false
   } else {
     /* Overwrites Display_Value if its current value is "0":
     otherwise, it adds onto it: */
