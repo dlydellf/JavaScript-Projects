@@ -75,3 +75,16 @@ const Perform_Calculation = {
   "-": (First_Operand, Second_Operand) => First_Operand - Second_Operand,
   "=": (First_Operand, Second_Operand) => Second_Operand
 }
+
+function Calculator_Reset() {
+  Calculator.Display_Value = "0";
+  Calculator.First_Operand = null;
+  Calculator.Second_Operand = false;
+  Calculator.operator = null;
+}
+
+// Updates the screen with the contents of Display_Value:
+function Update_Display() {
+  const display = document.querySelector(".calculator-screen")
+  display.value = Calculator.Display_Value
+}
