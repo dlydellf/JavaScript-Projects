@@ -1,18 +1,18 @@
-/* Sizes & centers menu*/
+/* Sizes & centers entire menu*/
 #menuBG {
   width: 400px;
   height: 470px;
   margin: 10px auto;
 }
 
-/* Sizes "Size" & "Meats" areas */
+/* Sizes "frmMenu" form */
 #frmMenu {
   border: 1px solid green;
   width: 400px;
   height: 200px;
 }
 
-/* Sizes "totalPrice" area */
+/* Sizes "totalPrice" <div> */
 #totalPrice {
   width: 200px;
   height: 190px;
@@ -20,16 +20,25 @@
   float: right;
 }
 
-/* Sizes & positions "Size" area, seperate from "Meats" area */
+/* Sizes & positions "Size" <div>*/
 .left {
   width: 200px;
   height: 200px;
   float: left;
 }
 
-/* Sizes & positions "MeatS" area */
+/* Sizes & positions "Meats" <div> */
 .right {
   width: 200px;
   height: 200px;
   float: right;
+}
+
+/* Sizes & positions "showText" <div>*/
+#showText {
+  border: 2px solid yellow;
+  width: 200px;
+  height: 190px;
+  margin: 0px auto;
+  float: left;
 }
