@@ -112,7 +112,7 @@ keys.addEventListener("click", (event) => {
     return
   }
 
-  // Ensures that AC clears the Calculator's numbers:
+  // Ensures that AC clears the Calculator's displayed numbers:
   if (target.classList.contains("all-clear")) {
     Calculator_Reset()
     Update_Display()
