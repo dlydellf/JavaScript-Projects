@@ -12,3 +12,11 @@
   width: 400px;
   height: 200px;
 }
+
+#totalPrice {
+  border: 1px solid green;
+  width: 200px;
+  height: 190px;
+  margin: 0 auto;
+  float: right;
+}
