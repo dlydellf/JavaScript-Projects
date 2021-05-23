@@ -88,3 +88,37 @@ function Update_Display() {
   const display = document.querySelector(".calculator-screen")
   display.value = Calculator.Display_Value
 }
+
+Update_Display();
+// Monitoring of button clicks:
+const keys = document.querySelector(".calculator-keys")
+keys.addEventListener("click", (event) => {
+  // The "target" variable is an object representing the clicked element:
+  const { target } = event;
+  // If the clicked element isn't a "button", exit the ():
+  if (!target.matches("button")) {
+    return
+  }
+
+  if (target.classList.contains("operator")) {
+    Handle_Operator(target.value)
+    Update_Display()
+    return
+  }
+
+  if (target.classList.contains("decimal")) {
+    Input_Decimal(target.value)
+    Update_Display()
+    return
+  }
+
+  // Ensures that AC clears the Calculator's numbers:
+  if (target.classList.contains("all-clear")) {
+    Calculator_Reset()
+    Update_Display()
+    return
+  }
+
+  Input_Digit(target.value)
+  Update_Display()
+})
