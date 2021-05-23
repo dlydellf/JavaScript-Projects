@@ -1,3 +1,14 @@
+body {
+  background-color: bisque;
+}
+
+h1,
+h3,
+div {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: darkred;
+}
+
 /* Sizes & centers entire menu*/
 #menuBG {
   width: 400px;
