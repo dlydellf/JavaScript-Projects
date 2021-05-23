@@ -22,8 +22,14 @@
 
 /* Sizes & positions "Size" area, seperate from "Meats" area */
 .left {
-  border: 1px solid red;
   width: 200px;
   height: 200px;
   float: left;
+}
+
+/* Sizes & positions "MeatS" area */
+.right {
+  width: 200px;
+  height: 200px;
+  float: right;
 }
