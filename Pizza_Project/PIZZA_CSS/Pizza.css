@@ -1,0 +1,14 @@
+/* Sizes & centers menu*/
+#menuBG {
+  border: 1px solid blue;
+  width: 400px;
+  height: 470px;
+  margin: 10px auto;
+}
+
+/* Sizes "Size" & "Meats" areas */
+#frmMenu {
+  border: 1px solid red;
+  width: 400px;
+  height: 200px;
+}
