@@ -1,7 +1,9 @@
+/* Gives the entire page a background color */
 body {
   background-color: bisque;
 }
 
+/* Standardizes the page's text properties */
 h1,
 h3,
 div {
@@ -9,52 +11,54 @@ div {
   color: darkred;
 }
 
-/* Sizes & centers entire menu*/
+/* Sizes & centers the entire menu*/
 #menuBG {
   width: 600px;
   height: 600px;
   margin: 10px auto;
 }
 
+/* Sizes & centers the Order button */
 #btnOrder {
   margin: 10px 0px 0px 235px;
   width: 100px;
   height: 40px;
 }
 
-/* Sizes "frmMenu" form */
+/* Sizes the form */
 #frmMenu {
   width: 600px;
   height: 500px;
 }
 
-/* Sizes & positions "Size" <div>*/
+/* Sizes & positions the "Size" <div>*/
 .left {
   width: 200px;
   height: 200px;
   float: left;
 }
 
-/* Sizes & positions "Vegetables" <div> */
+/* Sizes & positions the "Vegetables" <div> */
 .center {
   width: 200px;
   height: 200px;
   float: left;
 }
 
-/* Sizes & positions "Meats" <div> */
+/* Sizes & positions the "Meats" <div> */
 .right {
   width: 200px;
   height: 200px;
   float: right;
 }
 
+/* Sizes the "cart" <div> */
 #cart {
   width: 600px;
   height: 300px;
 }
 
-/* Sizes & positions "showText" <div>*/
+/* Sizes & positions the "showText" <div>*/
 #showText {
   width: 300px;
   height: 200px;
@@ -62,7 +66,7 @@ div {
   float: left;
 }
 
-/* Sizes "totalPrice" <div> */
+/* Sizes & positions the "totalPrice" <div> */
 #totalPrice {
   width: 300px;
   height: 200px;
