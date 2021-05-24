@@ -11,28 +11,34 @@ div {
 
 /* Sizes & centers entire menu*/
 #menuBG {
-  width: 400px;
-  height: 470px;
+  border: 1px solid black;
+  width: 600px;
+  height: 570px;
   margin: 10px auto;
+}
+
+#btnOrder {
+  margin: 10px 0px 0px 235px;
+  width: 100px;
+  height: 40px;
 }
 
 /* Sizes "frmMenu" form */
 #frmMenu {
-  border: 1px solid green;
-  width: 400px;
-  height: 200px;
-}
-
-/* Sizes "totalPrice" <div> */
-#totalPrice {
-  width: 200px;
-  height: 190px;
-  margin: 0 auto;
-  float: right;
+  border: 2px solid green;
+  width: 600px;
+  height: 400px;
 }
 
 /* Sizes & positions "Size" <div>*/
 .left {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+/* Sizes & positions "Vegetables" <div> */
+.center {
   width: 200px;
   height: 200px;
   float: left;
@@ -45,25 +51,26 @@ div {
   float: right;
 }
 
-/* Sizes & positions "showText" <div>*/
-#showText {
-  border: 2px solid yellow;
-  width: 200px;
-  height: 190px;
-  margin: 0px auto;
-  float: left;
-}
-
 #cart {
-  border: 1px solid red;
+  border: 2px solid yellow;
   top: 0;
   margin: 0px auto;
   width: 400px;
   height: 200px;
 }
 
-#btnOrder {
-  margin: 10px 0px 0px 100px;
-  width: 100px;
-  height: 40px;
+/* Sizes & positions "showText" <div>*/
+#showText {
+  width: 200px;
+  height: 190px;
+  margin: 0px auto;
+  float: left;
+}
+
+/* Sizes "totalPrice" <div> */
+#totalPrice {
+  width: 200px;
+  height: 190px;
+  margin: 0 auto;
+  float: right;
 }
