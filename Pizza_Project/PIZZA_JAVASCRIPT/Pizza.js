@@ -4,12 +4,14 @@ function getReceipt() {
   var runningTotal = 0;
   var sizeTotal = 0;
   var sizeArray = document.getElementsByClassName("size");
+  // Loop through every size option; assign whichever one is chosen to "SelectedSize":
   for (var i = 0; i < sizeArray.length; i++) {
     if (sizeArray[i].checked) {
       var selectedSize = sizeArray[i].value;
       text1 = `${text1} ${selectedSize}<br>`;
     }
   }
+  // Map pizza prices to their size:
   if (selectedSize === "Personal Pizza") {
     sizeTotal = 6;
   } else if (selectedSize === "Small Pizza") {
@@ -33,6 +35,7 @@ function getTopping(runningTotal, text1) {
   var toppingTotal = 0;
   var selectedTopping = [];
   var toppingArray = document.getElementsByClassName("toppings");
+  // Loop through each topping, recording those chosen:
   for (var j = 0; j < toppingArray.length; j++) {
     if (toppingArray[j].checked) {
       selectedTopping.push(toppingArray[j].value);
@@ -40,17 +43,20 @@ function getTopping(runningTotal, text1) {
       text1 = `${text1} ${toppingArray[j].value} <br>`;
     }
   }
+  // One topping is free, the rest aren't:
   var toppingCount = selectedTopping.length;
   if (toppingCount > 1) {
     toppingTotal = toppingCount - 1;
   } else {
     toppingTotal = 0;
   }
+  // Pizza size's cost + cost of topping(s):
   runningTotal = runningTotal + toppingTotal;
   console.log(`Total selected topping item: ${toppingCount}`);
   console.log(`${toppingCount} topping - 1 FREE topping = $${toppingTotal}.00`);
   console.log(`topping text1: ${text1}`);
   console.log(`Purchase Total: $${runningTotal}.00`);
+  // Place what was ordered into DOM:
   document.getElementById("showText").innerHTML = text1;
   document.getElementById("totalPrice").innerHTML = `<h3>Total: <strong>$${runningTotal}.00</strong></h3>`;
 }
