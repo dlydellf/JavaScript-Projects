@@ -23,10 +23,27 @@
             </div>\
           </div>\
         </body>",
-      );
+      ); /*
       $("#2").css({ color: "red" });
       $("#3").click(function () {
         $("h1").hide();
+      });*/
+
+      $(document).ready(function () {
+        // HAD to add the "$(document).ready()" part for this to work; "function()" desnn't run as a standalone ()
+        $("#1").click(function () {
+          // "When the element with id==1 is clicked, do what's in the curly brackets"
+          $("#2").append(
+            // "Append the text below to the element with id==2, once the above happens"
+            " - This was APPENDED here <em>after</em> you clicked the sentence above!<hr>(Click below to hide these lines...)",
+          );
+        });
+      });
+      $("document").ready(function () {
+        // What I learned from the above comment made creating this () much easier...
+        $("#3").click(function () {
+          $("#2").hide("slow"); // Same as above (); when element with id==3 is clicked, SLOWLY hide the element with id==2
+        });
       });
     });
   </script>
