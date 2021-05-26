@@ -16,19 +16,19 @@
             var ajax = new XMLHttpRequest()
 
             // Step 2: Prepare the open AJAX request:
-            ajax.open("GET", "content.html")
+            ajax.open("GET", "content.html") // <<<< 1st argument == 'GET' something from the server; 2nd argument is what's requested
 
             // Step 3: Define the AJAX response callback method:
-            ajax.onreadystatechange = function() {
-                if (ajax.readyState == 4) {
-                    document.getElementById("content").innerHTML = ajax.responseText
+            ajax.onreadystatechange = function() { // <<<<< this () is called EVERY time the 'readystate' changes, from 0 thru 4
+                if (ajax.readyState == 4) { // <<<< "4" == response is ready (along w/status == 200)
+                    document.getElementById("content").innerHTML = ajax.responseText // <<<< 'response.text' == a string, not XML DOM object
                 }
             }
-            
+
             // Step 4: Send the AJAX request for data:
             function getContent() {}
                 ajax.send()
-                document.getElementById("btn-content").style.display = "none";
+                document.getElementById("btn-content").style.display = "none"; // <<<< 'style.display=none' removes this element from display
 		</script>
     </body>
 </html>
