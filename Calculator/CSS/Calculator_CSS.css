@@ -1,6 +1,6 @@
 /* Sets .html's elements' font size; any added padding/border gets included in element's total size */
 html {
-  font-size: 70%;
+  font-size: 1vw;
   box-sizing: border-box;
 }
 
