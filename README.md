@@ -5,4 +5,4 @@ This repository will hold the JavaScript projects I've completed as I advance th
 
 - [x] Tic-Tac-Toe Project
 - [x] Calculator Project
-- [ ] Pizza Menu Project
+- [x] Pizza Menu Project
