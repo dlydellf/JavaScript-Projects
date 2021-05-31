@@ -36,3 +36,8 @@ footer {
   position: fixed;
   bottom: 0;
 }
+
+/* Adds padding between items in the array once one has been deleted */
+.remove {
+  padding-bottom: 5px;
+}
